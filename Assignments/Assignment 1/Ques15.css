@@ -1,0 +1,58 @@
+body {
+    height: 2000px; /* Makes page tall enough to scroll */
+    margin: 0;
+    padding: 40px;  /* So the top content isn't flush against the edge */
+}
+
+.main {
+    width: 1000px;
+    height: 200px;
+    margin: auto;
+    display: flex;
+    position: relative; /* Needed for absolute child */
+    border: 2px solid #ccc;
+    padding: 10px;
+}
+
+/* Static box */
+#static {
+    border-radius: 10px;
+    width: 150px;
+    height: 150px;
+    background-color: aquamarine;
+    position: static;
+}
+
+/* Relative box — 20px right & 20px down */
+#relative {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    background-color: darkgoldenrod;
+    position: relative;
+    left: 20px;
+    top: 20px;
+}
+
+/* Absolute box — bottom-right of .main */
+#absolute {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    background-color: rgb(11, 184, 184);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+/* Fixed box — bottom-left of screen while scrolling */
+#fixed {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    background-color: plum;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
